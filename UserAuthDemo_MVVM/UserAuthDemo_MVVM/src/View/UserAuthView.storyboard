@@ -14,9 +14,45 @@
                     <view key="view" contentMode="scaleToFill" id="CYO-Jv-dyr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ale-vu-fJr">
+                                <rect key="frame" x="16" y="188" width="382" height="120.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGP-7y-1aH">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSS-pW-nRP">
+                                        <rect key="frame" x="0.0" y="50" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFz-p7-UhG">
+                                        <rect key="frame" x="0.0" y="100" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MSS-pW-nRP" firstAttribute="width" secondItem="iGP-7y-1aH" secondAttribute="width" id="sL2-GP-lzW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ale-vu-fJr" firstAttribute="leading" secondItem="9w3-VS-6gu" secondAttribute="leading" constant="16" id="2TA-DZ-Vio"/>
+                            <constraint firstItem="Ale-vu-fJr" firstAttribute="centerX" secondItem="CYO-Jv-dyr" secondAttribute="centerX" id="Kht-y4-ft6"/>
+                            <constraint firstItem="Ale-vu-fJr" firstAttribute="top" secondItem="9w3-VS-6gu" secondAttribute="top" constant="144" id="QGZ-ED-yrV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9w3-VS-6gu"/>
                     </view>
+                    <connections>
+                        <outlet property="idTexrField" destination="iGP-7y-1aH" id="Gg9-0i-wlG"/>
+                        <outlet property="pwTextField" destination="MSS-pW-nRP" id="KOF-L7-Dyj"/>
+                        <outlet property="validationLabel" destination="mFz-p7-UhG" id="dfF-Yo-z4v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yG-94-2gk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
